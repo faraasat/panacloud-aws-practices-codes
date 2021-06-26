@@ -2,6 +2,11 @@
 ### Created an S3 Bucket
 
 ## aws-practice-2
-### Created an S3 Bucket
 ### Added a Lambda Function
 ### Created REST Link
+
+## aws-practice-2
+### Created an S3 Bucket
+### Deployed Bucket
+### Created CloudFront
+### Deployed on Cloud front
