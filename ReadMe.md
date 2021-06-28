@@ -10,3 +10,9 @@
 #### Deployed Bucket
 #### Created CloudFront
 #### Deployed on Cloud front
+
+## aws-practice-4 (AppSync as a DataSource)
+#### Created an S3 Bucket
+#### Deployed Bucket
+#### Created CloudFront
+#### Deployed on Cloud front

@@ -1,0 +1,9 @@
+# type Query {
+#     notes: [String]
+#     customNote(title: String!): String!
+# }
+
+type Query {
+  hello: String
+  myCustomMessage(msg: String): String
+}
