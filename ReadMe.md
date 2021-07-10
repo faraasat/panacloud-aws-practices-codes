@@ -15,3 +15,13 @@
 #### GraphQL
 #### AppSync
 
+## aws-practice-5 (DynamoDB as a DataSource)
+#### GraphQL
+#### AppSync
+#### DynamoDB
+
+## aws-practice-6 (AWS Amplify)
+#### GraphQL
+#### AppSync
+#### DynamoDB
+
