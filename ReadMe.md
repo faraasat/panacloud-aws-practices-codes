@@ -24,4 +24,5 @@
 #### GraphQL
 #### AppSync
 #### DynamoDB
+#### Amplify
 

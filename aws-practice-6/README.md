@@ -1,14 +1,13 @@
-# Welcome to your CDK TypeScript project!
+# Steps
 
-This is a blank project for TypeScript development with CDK.
+#### First Deploy Backend which is in /backend folder
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+#### Then go into frontend and use these commands and donot create graphql folder, API.ts, amplify folder and graphqlconfig.yml because it will auto create:
 
-## Useful commands
+##### npm install -g @aws-amplify/cli
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+##### amplify init
+
+##### amplify add codegen --apiId ENTER_YOUR_API_ID
+
+##### amplify publish to deploy
