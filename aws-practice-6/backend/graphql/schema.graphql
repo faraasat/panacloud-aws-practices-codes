@@ -15,7 +15,7 @@ type Query {
 }
 
 type Mutation {
-  addTodo(todo: TodoInput): Todo
-  updateTodo(todo: TodoInput): Todo
-  deleteTodo(todoId: String): String
+  addTodo(todo: TodoInput!): Todo
+  updateTodo(todo: TodoInput!): Todo
+  deleteTodo(todoId: String!): String
 }

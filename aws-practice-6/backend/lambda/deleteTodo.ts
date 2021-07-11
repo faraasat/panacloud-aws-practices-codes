@@ -1,20 +1,18 @@
-import * as AWS from "aws-sdk";
+const AWS = require("aws-sdk");
+const docClient = new AWS.DynamoDB.DocumentClient();
 
-async function deleteTodo(todoId: string): Promise<string | null> {
-  const docClient = new AWS.DynamoDB.DocumentClient();
-
+async function deleteTodo(todoId: string) {
   const params = {
-    TableName: process.env.TODOS_TABLE!,
+    TableName: process.env.TODOS_TABLE,
     Key: {
       id: todoId,
     },
   };
-
   try {
-    await docClient.delete(params).promise;
+    await docClient.delete(params).promise();
     return todoId;
-  } catch (error) {
-    console.log("DynamoDB Error => ", error);
+  } catch (err) {
+    console.log("DynamoDB error: ", err);
     return null;
   }
 }

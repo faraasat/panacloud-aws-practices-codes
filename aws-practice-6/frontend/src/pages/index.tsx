@@ -34,7 +34,6 @@ const IndexPage = () => {
           todo: todo,
         },
       })
-      console.log(data)
       todoTitleRef.current.value = ""
       fetchTodos()
     } catch (e) {
@@ -49,14 +48,11 @@ const IndexPage = () => {
       })
       setTodoData(data as incomingData)
       setLoading(false)
-      console.log(data)
     } catch (e) {
       setLoading(false)
       console.log(e)
     }
   }
-
-  console.log(todoData, loading)
 
   useEffect(() => {
     fetchTodos()

@@ -1,19 +1,17 @@
-import * as AWS from "aws-sdk";
+const AWS = require("aws-sdk");
+const docClient = new AWS.DynamoDB.DocumentClient();
 import Todo from "./Todo";
 
-async function addTodo(todo: Todo): Promise<Todo | null> {
-  const docClient = new AWS.DynamoDB.DocumentClient();
-
+async function addTodo(todo: Todo) {
   const params = {
-    TableName: process.env.TODOS_TABLE!,
+    TableName: process.env.TODOS_TABLE,
     Item: todo,
   };
-
   try {
-    const response = await docClient.put(params).promise;
-    return response.arguments;
-  } catch (error) {
-    console.log("DynamoDB Error => ", error);
+    await docClient.put(params).promise();
+    return todo;
+  } catch (err) {
+    console.log("DynamoDB error: ", err);
     return null;
   }
 }

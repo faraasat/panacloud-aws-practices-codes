@@ -16,7 +16,7 @@ export type Todo = {
 };
 
 export type AddTodoMutationVariables = {
-  todo?: TodoInput | null,
+  todo: TodoInput,
 };
 
 export type AddTodoMutation = {
@@ -29,7 +29,7 @@ export type AddTodoMutation = {
 };
 
 export type UpdateTodoMutationVariables = {
-  todo?: TodoInput | null,
+  todo: TodoInput,
 };
 
 export type UpdateTodoMutation = {
@@ -42,7 +42,7 @@ export type UpdateTodoMutation = {
 };
 
 export type DeleteTodoMutationVariables = {
-  todoId?: string | null,
+  todoId: string,
 };
 
 export type DeleteTodoMutation = {

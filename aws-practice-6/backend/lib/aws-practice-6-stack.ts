@@ -9,7 +9,7 @@ export class AwsPractice6Stack extends cdk.Stack {
 
     const api = new appsync.GraphqlApi(this, "AwsPractice6GraphQLAPI", {
       name: "AwsPractice6GraphQLAPI",
-      schema: appsync.Schema.fromAsset("graphql/schema.gql"),
+      schema: appsync.Schema.fromAsset("graphql/schema.graphql"),
       authorizationConfig: {
         defaultAuthorization: {
           authorizationType: appsync.AuthorizationType.API_KEY,
@@ -70,6 +70,10 @@ export class AwsPractice6Stack extends cdk.Stack {
 
     new cdk.CfnOutput(this, "GraphQLAPIKey", {
       value: api.apiKey || "",
+    });
+
+    new cdk.CfnOutput(this, "GraphQLAPIID", {
+      value: api.apiId || "",
     });
 
     new cdk.CfnOutput(this, "Stack Region", {
