@@ -38,6 +38,10 @@
 #### DynamoDB
 #### Apollo
 
+## aws-practice-7 (Appsync with DynamoDB using Mapping [without using lambda])
+#### GraphQL
+#### AppSync
+#### DynamoDB
 
 
 
