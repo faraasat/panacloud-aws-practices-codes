@@ -26,9 +26,23 @@
 #### DynamoDB
 #### Amplify
 
-## aws-practice-6-with-subscription (AWS Amplify)
+## aws-practice-6-subscription (AWS Amplify)
 #### GraphQL
 #### AppSync
 #### DynamoDB
 #### Amplify
+
+## aws-practice-7 (GraphQL with Apollo)
+#### GraphQL
+#### AppSync
+#### DynamoDB
+#### Apollo
+
+
+
+
+
+
+
+
 
