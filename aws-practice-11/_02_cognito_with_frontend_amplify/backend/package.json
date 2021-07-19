@@ -1,8 +1,8 @@
 {
-  "name": "_02_cognito_with_frontend_amplify",
+  "name": "backend",
   "version": "0.1.0",
   "bin": {
-    "_02_cognito_with_frontend_amplify": "bin/_02_cognito_with_frontend_amplify.js"
+    "backend": "bin/backend.js"
   },
   "scripts": {
     "build": "tsc",
@@ -21,6 +21,7 @@
     "typescript": "~3.9.7"
   },
   "dependencies": {
+    "@aws-cdk/aws-cognito": "^1.114.0",
     "@aws-cdk/core": "1.113.0",
     "source-map-support": "^0.5.16"
   }
