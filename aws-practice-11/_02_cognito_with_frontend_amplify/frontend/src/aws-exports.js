@@ -1,8 +1,8 @@
 const awsmobile = {
   Auth: {
-    region: "ADD YOUR REGION",
-    userPoolId: "ADD YOUR POOL ID",
-    userPoolWebClientId: "ADD YOUR CLIENT ID",
+    region: "us-east-1",
+    userPoolId: "us-east-1_Ns0BdkxiX",
+    userPoolWebClientId: "1ek1gmihv9a8rrmp5qjpquebrk",
   },
 }
 
