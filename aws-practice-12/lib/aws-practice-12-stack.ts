@@ -85,15 +85,27 @@ export class AwsPractice12Stack extends cdk.Stack {
       typeName: "Mutation",
       fieldName: "createData",
       requestMappingTemplate: appsync.MappingTemplate.fromString(`
-          $util.qr($context.arguments.put("id", $util.defaultIfNull($ctx.arguments.id, $util.autoId())))
-        {
-          "version": "2017-02-28",
-          "operation": "Invoke",
-          "payload": {
-              "arguments": $util.toJson($context.arguments)
-          }
+      $util.qr($context.arguments.put("id", $util.defaultIfNull($ctx.arguments.id, $util.autoId())))
+      {
+        "version": "2017-02-28",
+        "operation": "Invoke",
+        "payload": {
+          "arguments": $util.toJson($context.arguments)
         }
+      }
       `),
+    });
+
+    const ddbDataSource = api.addDynamoDbDataSource(
+      "DdbDatasource",
+      dynamoDBTable
+    );
+
+    ddbDataSource.createResolver({
+      typeName: "Query",
+      fieldName: "allData",
+      requestMappingTemplate: appsync.MappingTemplate.dynamoDbScanTable(),
+      responseMappingTemplate: appsync.MappingTemplate.dynamoDbResultList(),
     });
   }
 }
