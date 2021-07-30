@@ -18,7 +18,7 @@ export class Ex0CreateAutoSecretStack extends cdk.Stack {
         'exports.handler = function(event, ctx, cb) { console.log("SECRET_KEY", process.env.EXAMPLE_SECRET_KEY); return cb(null, "hi"); }'
       ),
       runtime: lambda.Runtime.NODEJS_12_X,
-      // role: role,
+      role: role,
       environment: {
         EXAMPLE_SECRET_KEY: `${
           secretsmanager.Secret.fromSecretAttributes(this, "ExampleSecretKey", {
