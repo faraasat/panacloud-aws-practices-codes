@@ -9,14 +9,30 @@ export class Ex01RotateSecretWithLambdaStack extends cdk.Stack {
 
     const secret = new secretsmanager.Secret(this, "Secret", {
       description: "My Secret",
-      secretName: "example-secret",
+      secretName: "myNewSecret",
       generateSecretString: {
         secretStringTemplate: JSON.stringify({}),
         generateStringKey: "SecretKey",
       },
     });
 
-    ///This will rotate after every 24 hours
+    const secretValue = secretsmanager.Secret.fromSecretNameV2(
+      this,
+      "SecretValueID",
+      secret.secretName
+    ).secretValue;
+
+    const lambdaFn = new lambda.Function(this, `ExampleLambdaAssetFn`, {
+      code: lambda.Code.fromInline(
+        'exports.handler = function(event, ctx, cb) { console.log("SECRET_KEY", process.env.EXAMPLE_SECRET_KEY); return cb(null, "hi"); }'
+      ),
+      runtime: lambda.Runtime.NODEJS_12_X,
+      handler: "index.handler",
+    });
+
+    lambdaFn.addEnvironment("EXAMPLE_SECRET_KEY", secretValue.toString());
+
+    // This lambda function will be envoked
     const lambdaFunc = new lambda.Function(this, "LambdaSecretRotate", {
       functionName: "lambda-keys-rotate",
       runtime: lambda.Runtime.NODEJS_12_X,
@@ -24,11 +40,12 @@ export class Ex01RotateSecretWithLambdaStack extends cdk.Stack {
       code: lambda.Code.fromAsset("lambda"),
       environment: {
         REGION: cdk.Stack.of(this).region,
-        SECRET_NAME: "example-secret",
-        KEY_IN_SECRET_NAME: "SecretKey",
+        SECRET_NAME: "myNewSecret",
+        KEY_IN_SECRET_NAME: "randomkey",
       },
     });
 
+    // Call this lambdaFunc after given time
     secret.addRotationSchedule("RotationSchedule", {
       rotationLambda: lambdaFunc,
       automaticallyAfter: cdk.Duration.hours(24),

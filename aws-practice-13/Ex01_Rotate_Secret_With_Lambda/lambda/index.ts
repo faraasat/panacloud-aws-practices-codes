@@ -4,7 +4,7 @@ import { SecretsManager } from "aws-sdk";
 const secretName = process.env.SECRET_NAME!;
 const keyInSecret = process.env.KEY_IN_SECRET_NAME!;
 const secretsManager = new SecretsManager({
-  region: process.env.REGION || "us-east-2",
+  region: process.env.REGION || "us-east-1",
 });
 
 interface Event {
