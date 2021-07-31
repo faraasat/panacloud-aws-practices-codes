@@ -55,6 +55,13 @@
 ## aws-practice-11 (using cognito)
 #### cognito
 
+## aws-practice-12 (using iam)
+#### iam
+#### policies
+
+## aws-practice-13 (using secret manager)
+#### secret manager
+
 
 
 
