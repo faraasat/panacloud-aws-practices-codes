@@ -62,6 +62,9 @@
 ## aws-practice-13 (using secret manager)
 #### secret manager
 
+## aws-practice-14 (using pipeline)
+#### pipelines
+
 
 
 
