@@ -24,7 +24,7 @@ export class Ex02CiCdPipelineUpdateCdkTemplateStack extends cdk.Stack {
             },
             commands: [
               "cd step12_CI_CD_pipeline",
-              "cd step02_CI_CD_pipeline_update_cdk_template",
+              "cd Ex02_CI_CD_Pipeline_Update_Cdk_Template",
               "npm install",
             ],
           },
