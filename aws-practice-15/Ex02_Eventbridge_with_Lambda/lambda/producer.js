@@ -1,16 +1,18 @@
 const AWS = require("aws-sdk");
 
 function helper(body) {
-  const eventBridge = new AWS.EventBridge({ region: "eu-west-1" });
+  const eventBridge = new AWS.EventBridge({ region: "us-east-1" });
 
   return eventBridge
     .putEvents({
       Entries: [
         {
           EventBusName: "default",
-          Source: "custom.api",
-          DetailType: "order",
-          Detail: `{ "country": "${body.country}" }`,
+          // Source: "custom.api",
+          Source: "demo",
+          // DetailType: "order",
+          DetailType: "demo",
+          Detail: `{ "Event Body": "${body.country}" }`,
         },
       ],
     })
