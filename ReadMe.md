@@ -71,5 +71,14 @@
 ## aws-practice-16 (using SES)
 #### SES
 
+## aws-practice-17 (using SQS and SNS)
+#### SQS
+#### SNS
+
+
+
+
+
+
 
 
