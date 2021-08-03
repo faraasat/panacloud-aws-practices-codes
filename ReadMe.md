@@ -68,7 +68,8 @@
 ## aws-practice-15 (using EventBridge)
 #### EventBridge
 
-
+## aws-practice-16 (using SES)
+#### SES
 
 
 
