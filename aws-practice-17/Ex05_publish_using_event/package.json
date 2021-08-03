@@ -21,6 +21,12 @@
     "typescript": "~3.9.7"
   },
   "dependencies": {
+    "@aws-cdk/aws-appsync": "^1.116.0",
+    "@aws-cdk/aws-events": "^1.116.0",
+    "@aws-cdk/aws-events-targets": "^1.116.0",
+    "@aws-cdk/aws-sns": "^1.116.0",
+    "@aws-cdk/aws-sns-subscriptions": "^1.116.0",
+    "@aws-cdk/aws-sqs": "^1.116.0",
     "@aws-cdk/core": "1.116.0",
     "source-map-support": "^0.5.16"
   }
