@@ -2,7 +2,7 @@ import * as cdk from "@aws-cdk/core";
 import * as events from "@aws-cdk/aws-events";
 import * as targets from "@aws-cdk/aws-events-targets";
 import * as lambda from "@aws-cdk/aws-lambda";
-import * as apigateway from "@aws-cdk/aws-apigateway";
+// import * as apigateway from "@aws-cdk/aws-apigateway";
 import * as path from "path";
 
 export class Ex02EventbridgeWithLambdaStack extends cdk.Stack {
@@ -20,9 +20,9 @@ export class Ex02EventbridgeWithLambdaStack extends cdk.Stack {
     events.EventBus.grantPutEvents(producerFn);
 
     // Api gateway to be able to send custom events from frontend
-    const api = new apigateway.LambdaRestApi(this, "testApi", {
-      handler: producerFn,
-    });
+    // const api = new apigateway.LambdaRestApi(this, "testApi", {
+    //   handler: producerFn,
+    // });
 
     // The lambda function which our eventbridge rule will trigger when it matches the country as PK
     const consumerFn = new lambda.Function(this, "consumerLambda", {
@@ -32,14 +32,23 @@ export class Ex02EventbridgeWithLambdaStack extends cdk.Stack {
     });
 
     // The rule that filters events to match country == "PK" and sends them to the consumer Lambda.
-    const PKrule = new events.Rule(this, "orderPKLambda", {
+    // const PKrule = new events.Rule(this, "orderPKLambda", {
+    //   targets: [new targets.LambdaFunction(consumerFn)],
+    //   description:
+    //     "Filter events that come from country PK and invoke lambda with it.",
+    //   eventPattern: {
+    //     detail: {
+    //       country: ["PK"],
+    //     },
+    //   },
+    // });
+
+    const newRule = new events.Rule(this, "demoClassRule", {
       targets: [new targets.LambdaFunction(consumerFn)],
       description:
         "Filter events that come from country PK and invoke lambda with it.",
       eventPattern: {
-        detail: {
-          country: ["PK"],
-        },
+        source: ["demo"],
       },
     });
   }
