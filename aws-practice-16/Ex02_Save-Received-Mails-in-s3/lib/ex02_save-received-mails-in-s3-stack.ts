@@ -17,14 +17,15 @@ export class Ex02SaveReceivedMailsInS3Stack extends cdk.Stack {
 
     // creating instance for taking email input while deployment
     // ref https://docs.aws.amazon.com/cdk/latest/guide/parameters.html
-    const emailAddress = new cdk.CfnParameter(this, "emailParam", {
-      type: "String",
-      description: "Write your recipient email",
-    });
+    // const emailAddress = new cdk.CfnParameter(this, "emailParam", {
+    //   type: "String",
+    //   description: "Write your recipient email",
+    // });
 
     // Adding a rule inside a rule set
     ruleSet.addRule("INVOKE_LAMBDA_RULE", {
-      recipients: [emailAddress.valueAsString], // if no recipients than the action will be called on any incoming mail addresses of verified domains
+      // recipients: [emailAddress.valueAsString], // if no recipients than the action will be called on any incoming mail addresses of verified domains
+      recipients: ["aamitpinger@yahoo.com"],
       actions: [
         new actions.S3({
           bucket,
