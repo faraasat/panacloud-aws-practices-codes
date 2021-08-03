@@ -65,6 +65,8 @@
 ## aws-practice-14 (using pipeline)
 #### pipelines
 
+## aws-practice-15 (using EventBridge)
+#### EventBridge
 
 
 
