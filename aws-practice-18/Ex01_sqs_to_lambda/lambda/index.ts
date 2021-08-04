@@ -1,5 +1,5 @@
-exports.handler = async (event, context) => {
-  event.Records.forEach((record) => {
+exports.handler = async (event: any, context: any) => {
+  event.Records.forEach((record: any) => {
     const { body } = record;
     console.log(body);
   });
