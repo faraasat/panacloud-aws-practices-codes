@@ -3,6 +3,8 @@ import Analytics from "@aws-amplify/analytics"
 import Auth from "@aws-amplify/auth"
 import { navigate } from "gatsby"
 
+// For collecting user analytics using this site go to pinpoint > web analytics and follow that steps
+
 const amplifyConfig = {
   Auth: {
     identityPoolId: "COGNITO_IDENTITY_POOL_ID",
