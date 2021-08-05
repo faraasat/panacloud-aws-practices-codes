@@ -71,12 +71,20 @@
 ## aws-practice-16 (using SES)
 #### SES
 
-## aws-practice-17 (using SQS and SNS)
-#### SQS
+## aws-practice-17 (using SNS)
 #### SNS
 
+## aws-practice-18 (using SQS)
+#### SQS
 
+## aws-practice-19 (using Pinpoint)
+#### Pinpoint
 
+## aws-practice-20 (using Step Functions)
+#### Step Functions
+
+## aws-practice-21 (using CloudWatch)
+#### CloudWatch
 
 
 
