@@ -9,6 +9,7 @@ export class AwsPractice22Stack extends cdk.Stack {
     super(scope, id, props);
 
     // The code that defines your stack goes here
+
     const TimeStreamDB = new timestream.CfnDatabase(this, "TimeStreamDB", {
       databaseName: "TimeStreamDB",
     });
