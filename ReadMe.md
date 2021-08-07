@@ -86,7 +86,9 @@
 ## aws-practice-21 (using CloudWatch)
 #### CloudWatch
 
-
+## aws-practice-22 (using Timestream DB an Grafana)
+#### Timestream DB
+#### Grafana
 
 
 
