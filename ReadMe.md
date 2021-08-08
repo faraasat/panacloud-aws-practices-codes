@@ -93,3 +93,10 @@
 ## aws-practice-23 (using xray)
 #### xray
 
+## aws-practice-24 (using lambda Layers)
+#### lambda Layers
+
+
+
+
+
