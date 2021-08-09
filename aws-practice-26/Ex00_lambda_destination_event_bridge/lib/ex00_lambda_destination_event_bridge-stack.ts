@@ -15,7 +15,6 @@ export class Ex00LambdaDestinationEventBridgeStack extends cdk.Stack {
     const bus = new event.EventBus(this, "EventBus", {
       eventBusName: "ExampleEventBus",
     });
-
     const myTopic = new sns.Topic(this, "MyTopic");
 
     const destinedLambda = new lambda.Function(this, "DestinationLambda", {
