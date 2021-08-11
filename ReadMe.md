@@ -96,6 +96,32 @@
 ## aws-practice-24 (using lambda Layers)
 #### lambda Layers
 
+## aws-practice-25 (using lambda Edged)
+#### lambda Edged
+
+## aws-practice-26 (using lambda Destinstion)
+#### lambda Destinstion
+
+## aws-practice-27 (using lambda Container)
+#### lambda Container
+
+## aws-practice-28 (using DynamoDB Stream)
+#### DynamoDB Stream
+
+## aws-practice-29 (using Constructs as Cloud Components)
+#### Constructs as Cloud Components
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
