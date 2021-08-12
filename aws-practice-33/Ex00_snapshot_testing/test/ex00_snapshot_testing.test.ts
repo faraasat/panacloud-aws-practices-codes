@@ -1,13 +1,19 @@
-import { expect as expectCDK, matchTemplate, MatchStyle } from '@aws-cdk/assert';
-import * as cdk from '@aws-cdk/core';
-import * as Ex00SnapshotTesting from '../lib/ex00_snapshot_testing-stack';
+import { expect as expectCDK, haveResource } from "@aws-cdk/assert";
+import cdk = require("@aws-cdk/core");
+import * as lambda from "@aws-cdk/aws-lambda";
+import { SynthUtils } from "@aws-cdk/assert";
+import { HitCounter } from "../lib/hitcounter";
 
-test('Empty Stack', () => {
-    const app = new cdk.App();
-    // WHEN
-    const stack = new Ex00SnapshotTesting.Ex00SnapshotTestingStack(app, 'MyTestStack');
-    // THEN
-    expectCDK(stack).to(matchTemplate({
-      "Resources": {}
-    }, MatchStyle.EXACT))
+test("DynamoDB Table Created", () => {
+  const stack = new cdk.Stack();
+  // WHEN
+  new HitCounter(stack, "MyTestConstruct", {
+    downstream: new lambda.Function(stack, "TestFunction", {
+      runtime: lambda.Runtime.NODEJS_10_X,
+      handler: "lambda.handler",
+      code: lambda.Code.fromInline("test"),
+    }),
+  });
+  // THEN
+  expect(SynthUtils.toCloudFormation(stack)).toMatchSnapshot();
 });
