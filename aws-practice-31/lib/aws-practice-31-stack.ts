@@ -18,6 +18,12 @@ export class AwsPractice31Stack extends cdk.Stack {
       versioned: true,
     });
 
+    // If zone is already created then
+    // const myZone = route53.HostedZone.fromHostedZoneAttributes(this, "HostedZone", {
+    //   zoneName: "panacloud.tk",
+    //   hostedZoneId: "sdfdsfddsfsdfs"
+    // }) as IHostedZone;
+
     //creating hosted zone for our domain
     const myZone = new route53.PublicHostedZone(this, "HostedZone", {
       zoneName: "panacloud.tk",
@@ -46,7 +52,6 @@ export class AwsPractice31Stack extends cdk.Stack {
     });
 
     // housekeeping for uploading the data in bucket
-
     new s3deploy.BucketDeployment(this, "DeployWebsite", {
       sources: [s3deploy.Source.asset("./frontend")],
       destinationBucket: websiteBucket,
@@ -61,6 +66,7 @@ export class AwsPractice31Stack extends cdk.Stack {
         new targets.CloudFrontTarget(distribution)
       ),
     });
+
     //Adding ipv6 record
     new route53.AaaaRecord(this, "Alias", {
       zone: myZone,
