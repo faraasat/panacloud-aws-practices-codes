@@ -27,5 +27,10 @@
     "@aws-cdk/core": "1.118.0",
     "aws-sdk": "^2.966.0",
     "source-map-support": "^0.5.16"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js"
+    ]
   }
 }
