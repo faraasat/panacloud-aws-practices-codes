@@ -15,6 +15,9 @@ export class AwsPractice32Stack extends cdk.Stack {
 
     const fileSystem = new efs.FileSystem(this, "lambdaEfsFileSystem", {
       vpc: myVpc,
+      // encrypted: true,
+      // lifecyclePolicy: efs.LifecyclePolicy.AFTER_14_DAYS,
+      // performanceMode: efs.PerformanceMode.GENERAL_PURPOSE
     });
 
     const accessPoint = fileSystem.addAccessPoint("AccessPoint", {
@@ -35,7 +38,7 @@ export class AwsPractice32Stack extends cdk.Stack {
       code: lambda.Code.fromAsset("lambda"),
       handler: "msg.handler",
       vpc: myVpc,
-      filesystem: lambda.FileSystem.fromEfsAccessPoint(accessPoint, "/mnt/msg"),
+      filesystem: lambda.FileSystem.fromEfsAccessPoint(accessPoint, "/mnt/msg"), // /mnt/ is neccessary
     });
 
     const api = new apigw.HttpApi(this, "Endpoint", {
