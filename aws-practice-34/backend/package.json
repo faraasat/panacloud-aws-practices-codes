@@ -21,7 +21,21 @@
     "typescript": "~3.9.7"
   },
   "dependencies": {
+    "@aws-cdk/aws-appsync": "^1.118.0",
+    "@aws-cdk/aws-cognito": "^1.118.0",
+    "@aws-cdk/aws-dynamodb": "^1.118.0",
+    "@aws-cdk/aws-events": "^1.118.0",
+    "@aws-cdk/aws-events-targets": "^1.118.0",
+    "@aws-cdk/aws-iam": "^1.118.0",
+    "@aws-cdk/aws-lambda": "^1.118.0",
+    "@aws-cdk/aws-sns": "^1.118.0",
+    "@aws-cdk/aws-sns-subscriptions": "^1.118.0",
+    "@aws-cdk/aws-stepfunctions": "^1.118.0",
+    "@aws-cdk/aws-stepfunctions-tasks": "^1.118.0",
     "@aws-cdk/core": "1.118.0",
+    "aws-lambda": "^1.0.6",
+    "aws-sdk": "^2.967.0",
+    "crypto": "^1.0.1",
     "source-map-support": "^0.5.16"
   }
 }
