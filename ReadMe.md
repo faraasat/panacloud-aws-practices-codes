@@ -114,9 +114,14 @@
 ## aws-practice-30 (using Multiple Stacks)
 #### Multiple Stacks
 
-## aws-practice-30 (using Route 53)
+## aws-practice-31 (using Route 53)
 #### Route 53
 
+## aws-practice-32 (using EFS)
+#### Elastic File Storage
+
+## aws-practice-33 (using Testing)
+#### Testing CDK
 
 
 
