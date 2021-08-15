@@ -21,7 +21,9 @@
     "typescript": "~3.9.7"
   },
   "dependencies": {
+    "@aws-cdk/aws-s3": "^1.118.0",
     "@aws-cdk/core": "1.118.0",
+    "console": "^0.7.2",
     "source-map-support": "^0.5.16"
   }
 }
