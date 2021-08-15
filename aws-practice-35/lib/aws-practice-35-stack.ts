@@ -58,7 +58,7 @@ export class AwsPractice35Stack extends cdk.Stack {
 //https://docs.aws.amazon.com/cdk/latest/guide/aspects.html
 //https://en.wikipedia.org/wiki/Visitor_pattern
 class TraverseResources implements cdk.IAspect {
-  constructor(stack: CDKDesignPatternsAppStack) {}
+  constructor(stack: AwsPractice35Stack) {}
 
   //this method will be called one time for each node and the node itself will be passed as a parameter
   public visit(node: IConstruct): void {
