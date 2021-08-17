@@ -123,9 +123,17 @@
 ## aws-practice-33 (using Testing)
 #### Testing CDK
 
-## aws-practice-33 (using EDD)
+## aws-practice-34 (using EDD)
 #### Event Driven Development
 
+## aws-practice-35 (using CDP)
+#### CDK Design Patterns
+
+## aws-practice-36 (using AWS RDS)
+#### AWS RDS
+
+## aws-practice-37 (using Redshift)
+#### Redshift
 
 
 
