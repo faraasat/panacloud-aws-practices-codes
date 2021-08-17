@@ -135,6 +135,9 @@
 ## aws-practice-37 (using Redshift)
 #### Redshift
 
+## aws-practice-38 (using Aurora Serverless)
+#### Aurora Serverless
+
 
 
 
