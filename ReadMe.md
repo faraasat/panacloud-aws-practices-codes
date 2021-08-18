@@ -138,6 +138,7 @@
 ## aws-practice-38 (using Aurora Serverless)
 #### Aurora Serverless
 
+## aws-practice-38 (using Aurora Serverless Data API)
 #### Aurora Serverless Data API
 
 
