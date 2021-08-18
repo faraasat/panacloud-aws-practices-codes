@@ -150,6 +150,12 @@
 ## aws-practice-42 (using Lambda Power Tuning)
 #### Lambda Power Tuning
 
+## aws-practice-43 (using Kinesis)
+#### Kinesis
+
+## aws-practice-44 (using VPC)
+#### VPC
+
 
 
 
