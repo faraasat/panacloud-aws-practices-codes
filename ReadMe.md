@@ -138,10 +138,11 @@
 ## aws-practice-38 (using Aurora Serverless)
 #### Aurora Serverless
 
-## aws-practice-38 (using Aurora Serverless Data API)
+## aws-practice-39 (using Aurora Serverless Data API)
 #### Aurora Serverless Data API
 
-
+## aws-practice-40 (using AWS WAF API Gateway)
+#### AWS WAF API Gateway
 
 
 
