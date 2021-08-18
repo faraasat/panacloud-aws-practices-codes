@@ -6,3 +6,8 @@ node_modules
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+
+!lambda-layers/save-logs-in-s3/extensions-api.js
+!lambda-layers/save-logs-in-s3/index.js
+!lambda-layers/save-logs-in-s3/http-listener.js
+!lambda-layers/save-logs-in-s3/logs-api.js
