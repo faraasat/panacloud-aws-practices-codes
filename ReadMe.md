@@ -144,6 +144,14 @@
 ## aws-practice-40 (using AWS WAF API Gateway)
 #### AWS WAF API Gateway
 
+## aws-practice-41 (using Lambda Extensions)
+#### Lambda Extensions
+
+## aws-practice-42 (using Lambda Power Tuning)
+#### Lambda Power Tuning
+
+
+
 
 
 
