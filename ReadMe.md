@@ -168,8 +168,11 @@
 ## aws-practice-48 (using AWS MediaLive)
 #### AWS MediaLive
 
-## aws-practice-48 (using AWS IVC)
+## aws-practice-49 (using AWS IVC)
 #### AWS IVC
+
+## aws-practice-50 (using IoT Core)
+#### IoT Core
 
 
 
