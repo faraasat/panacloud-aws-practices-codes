@@ -159,6 +159,9 @@
 ## aws-practice-45 (using Neptune)
 #### Neptune
 
+## aws-practice-46 (using Fargate)
+#### Fargate
+
 
 
 
