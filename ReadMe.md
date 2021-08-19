@@ -168,6 +168,9 @@
 ## aws-practice-48 (using AWS MediaLive)
 #### AWS MediaLive
 
+## aws-practice-48 (using AWS IVC)
+#### AWS IVC
+
 
 
 
