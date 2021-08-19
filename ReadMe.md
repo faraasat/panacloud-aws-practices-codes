@@ -177,6 +177,9 @@
 ## aws-practice-51 (using Green Grass V2)
 #### Green Grass V2
 
+## aws-practice-52 (using Doc DB)
+#### Doc DB
+
 
 
 
