@@ -165,6 +165,9 @@
 ## aws-practice-47 (using EC2)
 #### EC2
 
+## aws-practice-48 (using AWS MediaLive)
+#### AWS MediaLive
+
 
 
 
