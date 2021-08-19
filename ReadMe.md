@@ -174,6 +174,9 @@
 ## aws-practice-50 (using IoT Core)
 #### IoT Core
 
+## aws-practice-51 (using Green Grass V2)
+#### Green Grass V2
+
 
 
 
