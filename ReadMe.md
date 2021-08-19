@@ -162,6 +162,9 @@
 ## aws-practice-46 (using Fargate)
 #### Fargate
 
+## aws-practice-47 (using EC2)
+#### EC2
+
 
 
 
