@@ -1,8 +1,19 @@
-# Welcome to your CDK TypeScript project!
+# AWS CDK CI/CD Pipeline
 
-This is a blank project for TypeScript development with CDK.
+## Overview
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+In this step we are just setting up a cdk pipline source that will be a connection between our github and aws.
+
+## step 1
+Go to https://github.com/settings/tokens and create your Personal access token. Select complete scope of repo and click on Generate token to generate token.
+
+## step 2
+- Go to the AWS secret Manager Console and click on store a new secret.
+- Select Secret type other type of secrets and select plaintext and paste the token in the input.
+- Then add a secret name and it will be used in your cdk code.
+- then save.
+
+Note: For using code pipeline please create your own repo and setup it with your own github credentials with access token.
 
 ## Useful commands
 

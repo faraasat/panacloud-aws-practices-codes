@@ -1,3 +1,37 @@
+## CDK Design Patterns
+
+CDK essentially follows Composite Design Pattern and applies it on AWS infrastructure resources by modelling them as hierarchical constructs.
+
+[Composite Design Pattern](https://sourcemaking.com/design_patterns/composite)
+
+[First learn about constructs](https://docs.aws.amazon.com/cdk/latest/guide/constructs.html)
+
+[CDK Runtime Context](https://docs.aws.amazon.com/cdk/latest/guide/context.html)
+
+[Tagging](https://docs.aws.amazon.com/cdk/latest/guide/tagging.html)
+
+[Tagging Best Practices](https://d1.awsstatic.com/whitepapers/aws-tagging-best-practices.pdf)
+
+[Understand construct Tree](https://docs.aws.amazon.com/cdk/latest/guide/constructs.html#constructs_tree)
+
+[Construct Base Class](https://docs.aws.amazon.com/cdk/api/latest/docs/@aws-cdk_core.Construct.html)
+
+[ConstructNode](https://docs.aws.amazon.com/cdk/api/latest/docs/@aws-cdk_core.ConstructNode.html)
+
+[Aspect](https://docs.aws.amazon.com/cdk/latest/guide/aspects.html)
+
+[Aspect implement the Visitor Pattern](https://en.wikipedia.org/wiki/Visitor_pattern)
+
+[Step 35 Video in English on Facebook](https://www.facebook.com/zeeshanhanif/videos/10226081386086052)
+
+[Step 35 Video in English on YouTube](https://www.youtube.com/watch?v=MUDYeQ2HSLs)
+
+[Step 35 Video in Urdu on Facebook](https://www.facebook.com/zeeshanhanif/videos/10226089243162474)
+
+[Step 35 Video in Urdu on YouTube](https://www.youtube.com/watch?v=OgvmM1f-OjI)
+
+
+
 # Welcome to your CDK TypeScript project!
 
 This is a blank project for TypeScript development with CDK.

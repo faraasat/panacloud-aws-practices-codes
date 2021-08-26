@@ -1,14 +1,11 @@
-# Welcome to your CDK TypeScript project!
+# Basic SQS
 
-This is a blank project for TypeScript development with CDK.
+## Dependencies:
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+```
+npm i @aws-cdk/aws-sqs
+```
 
-## Useful commands
+## Summary
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+Here we have defined a simple SQS queue and nothing else. We will not be integrating it with any other aws service and we will manually send and receive messages to it by using our AWS console or the CLI.

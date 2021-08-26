@@ -1,8 +1,54 @@
-# Welcome to your CDK TypeScript project!
+# Granting IAM policies to Resources
 
-This is a blank project for TypeScript development with CDK.
+![alt text](img/iam.png)
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+You manage access in AWS by creating policies and attaching them to IAM identities (users, groups of users, or roles) or AWS resources. A policy is an object in AWS that, when associated with an identity or resource, defines their permissions. AWS evaluates these policies when an IAM principal (user or role) makes a request. Permissions in the policies determine whether the request is allowed or denied.
+
+## Why IAM Policy?
+For a tight security reason AWS don't allow one resource to access another resource without any permissions. What we are doing here is creating a role and grant some permissions and policies to that particular role then attach that role to a particular resource.
+
+# Code explanation
+
+Just creating the role that will attach to the lambda function
+
+```javascript
+    const role = new Role(this, 'LambdaRole', {
+      assumedBy: new ServicePrincipal('lambda.amazonaws.com'),
+    });
+```
+Defining policy that will be granting access to all the operations of dynamodb and all the cloudwatch logs events. Logs permissions are default but if we define a role to the resource so all the default policies will be override.
+
+```javascript
+    const policy = new PolicyStatement({
+      effect: Effect.ALLOW,
+      actions: ['dynamodb:*', "logs:*"],
+      resources: ['*']
+    });
+```
+
+Assigning role to lambda function
+
+```javascript
+     const lambda_function = new lambda.Function(this, "LambdaFucntion", {
+      ///....
+      role: role,
+      ///...
+    })
+```
+
+
+[AWS Identity and Access Management Construct Library](https://docs.aws.amazon.com/cdk/api/latest/docs/aws-iam-readme.html)
+
+[Step 12 Video in English on Facebook](https://www.facebook.com/zeeshanhanif/videos/10225434631997604)
+
+[Step 12 Video in English on YouTube](https://www.youtube.com/watch?v=geV-TV7kTgE)
+
+
+[Step 12 Video in Urdu on Facebook](https://www.facebook.com/zeeshanhanif/videos/10225444019552287)
+
+[Step 12 Video in Urdu on YouTube](https://www.youtube.com/watch?v=AHam583oT7c)
+
+
 
 ## Useful commands
 

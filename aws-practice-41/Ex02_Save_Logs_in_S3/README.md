@@ -1,14 +1,13 @@
-# Welcome to your CDK TypeScript project!
 
-This is a blank project for TypeScript development with CDK.
+[Lambda Extensions API](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-extensions-api.html)
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+[Node Process Object Explained](https://www.freecodecamp.org/news/node-process-object-explained/)
 
-## Useful commands
+* In this example 
+* As we already mentioned lambda extension is deployed as lambda layer.In lambda layer folder we placed a folder named extensions(This name is necessary otherwise it will be considered as lambda layer).In extensions folder we created a shell script.In shell script file we import folder which contain our extension logic.We are implementing a simple external extension in this example.
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+* In extensions folder give read and write permessions to shell file by running this cmd (chmod 777 filename)
+* After Trigger lambda function check your S3 bucket for logs
+
+[How create shell file in windows](https://www.youtube.com/watch?v=0Dv94qlpmd4&ab_channel=Tutplus24)
+[How create shell file in Linux](https://www.youtube.com/watch?v=eiBVlxxu3so&ab_channel=KrisOcchipinti)
